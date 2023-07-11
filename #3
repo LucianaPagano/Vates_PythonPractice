@@ -1,12 +1,44 @@
 #1 
+valor_dado = int(input("Ingrese un valor: "))
+for i in range(1, valor_dado):
+    if i % 5 == 0:
+        print(i)
 
 #2 
-
+numero = int(input("Ingrese un valor: "))
+for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            print("El numero no es primo")
+        else: 
+            print("El numero es primo")
 #3
 for i in range(1, 10):
     num = int("1" * i)
     resultado = num * num
     print(f"{num} * {num} = {resultado}")
+#4
+for i in range(1, 10):
+    multi = int("1" * i)
+    prod = multi * multi
+    print(multi, "*", multi, "=", prod)
+#5
+str1 = input("Ingrese la primera cadena de texto: ")
+str2 = input("Ingrese la segunda cadena de texto: ")
+
+p_c = [a + b for a in str1 for b in str2]
+
+print("El producto cartesiano letra a letra entre", str1, "y", str2, "es:")
+print(" ".join(p_c))
+#7
+cadena1 = input("Ingrese la primera cadena de texto: ")
+cadena2 = input("Ingrese la segunda cadena de texto: ")
+
+if len(cadena1) != len(cadena2):
+    print("Las cadenas no tienen la misma longitud.")
+else:
+    distancia = sum(c1 != c2 for c1, c2 in zip(cadena1, cadena2))
+    print("La distancia de Hamming entre las cadenas es:", distancia)
+
 #8
 a = int(input("Primer número: "))
 b = int(input("Segundo número: "))
@@ -15,3 +47,5 @@ for i in range(1, divisor + 1):
   if a % i == 0 and b % i == 0:
     mcd = i
 print(mcd)
+
+#9 
